@@ -1722,7 +1722,7 @@ body .main .content footer.footer .content small {
   }
   body .main .content .experience-section {
     width: 100%;
-    min-height: 90vh !important;
+    min-height: 70vh !important;
     justify-self: center;
     height: 100%;
     padding: 0 0.5rem;
@@ -1778,21 +1778,24 @@ body .main .content footer.footer .content small {
   }
   body .main .content .experience-section .main_content .workplaces {
     display: flex;
-    width: 90%;
+    width: 100%;
     padding: 1rem;
     align-items: flex-start;
     flex-direction: column;
     margin-top: 2rem;
+    box-sizing: border-box;
   }
   body .main .content .experience-section .main_content .workplaces .action-buttons {
-    width: 30%;
+    width: 100%;
     height: 100%;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 5px;
   }
   body .main .content .experience-section .main_content .workplaces .action-buttons li {
-    width: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
     list-style: none;
     color: var(--text-color);
     text-align: start;
@@ -1802,6 +1805,7 @@ body .main .content footer.footer .content small {
     box-sizing: border-box;
     letter-spacing: 0.02cm;
     border-left: none !important;
+    border-right: none !important;
     border-bottom: 2px solid rgba(136, 146, 176, 0.3960784314);
     white-space: nowrap;
     margin-bottom: 2rem;
@@ -1812,10 +1816,12 @@ body .main .content footer.footer .content small {
   body .main .content .experience-section .main_content .workplaces .action-buttons li.active {
     background: rgba(204, 214, 246, 0.0666666667);
     color: var(--primary-color);
+    border-left: none !important;
     border-bottom: 2px solid var(--primary-color);
   }
   body .main .content .experience-section .main_content .workplaces .work-details {
-    display: flex;
+    width: 100%;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     padding: 0rem;
@@ -1827,12 +1833,18 @@ body .main .content footer.footer .content small {
     display: flex;
     width: -moz-fit-content;
     width: fit-content;
-    white-space: nowrap;
-    padding: 0 !important;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0.2rem 0 !important;
+    box-sizing: border-box;
+    align-items: center;
   }
   body .main .content .experience-section .main_content .workplaces .work-details h4.position a {
     text-decoration: none;
-    color: var(--primary-color);
+    background: linear-gradient(190deg, #00eafb, #4B184D);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-left: 1rem;
   }
   body .main .content .experience-section .main_content .workplaces .work-details small {
@@ -1852,6 +1864,7 @@ body .main .content footer.footer .content small {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 0.8em;
   }
   body .main .content .experience-section .main_content .workplaces .work-details ul.responsibilities li i.bx {
     width: 10%;
@@ -1983,13 +1996,15 @@ body .main .content footer.footer .content small {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body .main .content .work-section .main_content .project .project-details h5 {
     color: var(--primary-color);
     font-weight: 400;
     font-size: 0.8em;
     margin: 0;
-    margin-top: 5%;
+    margin-top: 0%;
     line-height: 1.5em;
     font-family: "Zen Dots";
   }
@@ -2046,7 +2061,10 @@ body .main .content footer.footer .content small {
     text-decoration: none;
   }
   body .main .content .work-section .main_content .project .project-details .extra .more a i.bx {
-    color: var(--accent-color);
+    background: linear-gradient(190deg, #00eafb, #4B184D);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 1.5em;
   }
   body .main .content .work-section .main_content .project_2 {
@@ -2097,6 +2115,8 @@ body .main .content footer.footer .content small {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body .main .content .work-section .main_content .project_2 .project-details h5 {
     color: var(--primary-color);
@@ -2160,7 +2180,10 @@ body .main .content footer.footer .content small {
     text-decoration: none;
   }
   body .main .content .work-section .main_content .project_2 .project-details .extra .more a i.bx {
-    color: var(--accent-color);
+    background: linear-gradient(190deg, #00eafb, #4B184D);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 1.5em;
   }
   body .main .content .other-projects {
@@ -2341,6 +2364,10 @@ body .main .content footer.footer .content small {
   body .main .content footer.footer .content span {
     text-align: center;
     color: var(--primary-color);
+    background: linear-gradient(190deg, #00eafb, #4B184D);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 0.9em;
     font-weight: 300;
     word-spacing: 0.2rem;
@@ -2349,6 +2376,9 @@ body .main .content footer.footer .content small {
   body .main .content footer.footer .content small {
     text-align: center;
     margin-top: 0.5rem;
-    color: var(--primary-color);
+    background: linear-gradient(190deg, #00eafb, #4B184D);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }/*# sourceMappingURL=themes.css.map */
