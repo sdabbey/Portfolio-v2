@@ -614,6 +614,7 @@ body .main .content .experience-section .main_content .workplaces .action-button
   border-bottom: none;
   border-left: 2px solid rgba(136, 146, 176, 0.3960784314) !important;
   white-space: nowrap;
+  cursor: pointer;
 }
 body .main .content .experience-section .main_content .workplaces .action-buttons li:hover {
   background: rgba(204, 214, 246, 0.0666666667);
@@ -625,6 +626,7 @@ body .main .content .experience-section .main_content .workplaces .action-button
   border-left: 2px solid var(--primary-color) !important;
 }
 body .main .content .experience-section .main_content .workplaces .work-details {
+  width: 80%;
   display: none;
   flex-direction: column;
   align-items: flex-start;
