@@ -1221,6 +1221,7 @@ body .main .content footer.footer .content small {
     padding: 0;
     margin: 0;
     background: white;
+    background: linear-gradient(154deg, rgb(245, 236, 178) 0%, rgb(168, 254, 255) 34%, rgb(158, 232, 244) 50%, rgb(200, 188, 255) 73%, rgb(242, 204, 141) 100%);
     overflow: hidden;
     scroll-behavior: smooth;
     font-family: "Space Grotesk";
