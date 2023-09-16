@@ -12,9 +12,23 @@
     <link rel="stylesheet" href="stylesheets/dark.css">
     <link rel="stylesheet" href="stylesheets/themes.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+   
+    
     <title>sdabbey</title>
 </head>
 <body id="main-body" class="dark">
+    <div class="preloader" id="preloader">
+        <div class="content">
+            <img src="imgs/logo.png" alt="">
+            <h5 class="ml1">
+                <span class="text-wrapper">
+                  <span class="letters">sdabbey</span>
+                </span>
+            </h5>
+            
+        </div>
+    </div>
     <nav class="navbar">
         <div class="nav-logo">
             <img src="imgs/logo3.png"  alt="">
@@ -48,15 +62,13 @@
     </nav>
     <div class="sidebar">
        
-        <ul class="nav_list">
-           
+        <ul class="nav_list">       
             <li><a href="#about-section"><span>01.</span> About</a></li>
             <li><a href="#experience-section"><span>02.</span> Experience</a></li>
             <li><a href="#work-section"><span>03.</span> Work</a></li>
             <li><a href="#contact-section"><span>04.</span> Contact</a></li>
             <div class="extra">
                 <a href="docs/my-resume.pdf" download  class="btn">Resume</a>
-                
             </div>
         </ul>
         <div class="socials">
@@ -89,12 +101,10 @@
             <!-- Home Section -->
             <div class="home-section" id="home-section">
                 <section class="main_content">
-                    <h4>Hi, my name is</h4>
-                    <h1>Samuel Desmond Abbey Darko.</h1>
-                    <span>I develop things for the web.</span>
-                    <p>I'm a web developer specializing in building exceptional and responsive websites and web apps. Currently, I'm focused on
-                        building very interactive UI.
-                    </p>
+                    <h4></h4>
+                    <h1></h1>
+                    <span></span>
+                    <p></p>
 
                     <div class="action">
                         <small>coming soon !!!</small>
@@ -377,72 +387,9 @@
         
        
     </div>
-    <script>
-        const workbtns = document.querySelectorAll(".workplaces .action-buttons li")
-        const workdetails = document.querySelectorAll(".work-details")
-        workbtns.forEach(btn => {
-            btn.addEventListener("click", () =>{
-                workbtns.forEach(button =>{
-                    if(button.classList.contains("active") == true){
-                        button.classList.remove("active")
-                    }
-                })
-                btn.classList.add("active")
-                workdetails.forEach(detail =>{
-                    if(detail.classList.contains("active")){
-                        detail.classList.remove("active")
-                    }
-                    workDetailId = detail.getAttribute("data-detail-id")
-                    if(workDetailId == btn.id){
-                        detail.classList.add("active")
-                    }
-                })
-            })
-        })
-    </script>
 
-    <script>
-        var toggle = document.getElementById("toggle_dark")
-    var input_toggle = document.getElementById("darkmode-toggle")
-    var body = document.getElementById("main-body")
-    toggle.addEventListener('click', () => {
-        body.classList.toggle('dark')
-        localStorage.setItem('darkmode', body.className);
-    })
+    <script src="stylesheets/main.js"></script>
+    <script src="stylesheets/anime.js"></script>
 
-    var body = document.getElementById("main-body")
-    window.addEventListener('load', () => {
-      if(localStorage.getItem("darkmode")){
-        body.classList.toggle('dark')
-        input_toggle.checked = true;
-      }
-      setTimeout(function() {
-                document.getElementById('alert').classList.add("close");
-            }, 4000);
-      
-    })
-
-
-        // SideNav trigger
-        let nav_trigger = document.querySelector('#nav-trigger');
-        let sidebar = document.querySelector('.sidebar');
-        let nav_item = document.querySelectorAll('.nav_list li')
-        nav_item.forEach(item => {
-            item.addEventListener('click', () => {
-                sidebar.classList.remove('active')
-                nav_trigger.classList.remove('active')
-            })
-                
-            }
-        );
-
-        nav_trigger.onclick = function() {
-            sidebar.classList.toggle('active')
-            nav_trigger.classList.toggle('active')
-        }
-        searchBtn.onclick = function() {
-            sidebar.classList.toggle('active')
-        }
-    </script>
 </body>
 </html>
