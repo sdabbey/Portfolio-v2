@@ -64,7 +64,7 @@ anime.timeline({loop: false})
   }
 
 
-  var info = "I'm a web developer specializing in building exceptional and responsive websites and web apps. Currently, I'm focused on building very interactive UI.";
+  var info = "I'm a web developer specialised in building exceptional and responsive websites and web apps. Currently, I'm focused on building very interactive UI.";
   var l = 0
   var speed2 = 20;
   function typeInfo() {
