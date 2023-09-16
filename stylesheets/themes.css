@@ -1186,6 +1186,7 @@ body .main .content .other-projects .project-list .project-card .extra {
   width: 100%;
   height: 20%;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   font-family: "Space Grotesk";
 }
