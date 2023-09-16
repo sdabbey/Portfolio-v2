@@ -125,7 +125,83 @@ body{
     font-family: 'Space Grotesk';
     position: relative;
     box-sizing: border-box;
-    
+    .preloader{
+        background-color: #040911;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        color: white;
+        .content{
+            position: relative;
+            top: 35%;
+            left: 0%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            transform: translate(-0%, -35%);
+            img{
+                width: 3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                perspective: 800px;
+                transform-style: preserve-3d;
+                animation: skew 2s;
+            }
+            @keyframes skew {
+                0%{
+                    transform: rotateY(0deg);
+                }
+                
+                
+                100%{
+                    transform: rotateY(-360deg);
+                }
+            }
+            .ml1{
+                position: relative;
+                font-weight: 200;
+                font-size: 1.5em;
+                margin-top: .2rem;
+                
+                .text-wrapper {
+                    position: relative;
+                    display: inline-block;
+                    padding-top: 0.2em;
+                    padding-right: 0.05em;
+                    padding-bottom: 0.1em;
+                    overflow: hidden;
+                    
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                   
+                }
+                .letter {
+                    transform-origin: 50% 100%;
+                    
+                    color: var(--primary-color);
+                    background: linear-gradient(180deg, #00d8fb, #4B184D);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    display: flex;
+                    justify-content: center;
+                    display: inline-block;
+                    line-height: 1em;
+                }
+            }
+            
+            
+        }
+    }
     .navbar{
         width: 100%;
         height: 10%;
@@ -364,6 +440,7 @@ body{
                 margin-bottom: 2rem;
                 .main_content{
                     width: 100%;
+                    min-height: 90vh;
                     height:100% !important;
                     
                     font-size: 16px;
@@ -372,7 +449,7 @@ body{
                     align-items: flex-start;
                     justify-content: space-around;
                    
-                    
+                    transform-origin: 0 0;
                     padding: 2% 0;
                     box-sizing: border-box;
                     h4{
@@ -381,15 +458,16 @@ body{
                         font-weight: 400;
                         letter-spacing: .1rem;
                         box-sizing: border-box;
-                       
+                        transform-origin: 0 0;
                         
                     }
                     h1{
                         font-size: 4em;
                         font-family: 'Zen Dots';
-                       
+                        transform-origin: 0 0;
                         color: var(--accent-color);
                         margin: 0;
+                       
                         line-height: 1.3em;
                         font-weight: bold;
                         box-sizing: border-box;
@@ -562,7 +640,7 @@ body{
                             margin-top: -8%;
                             margin-bottom: 10%;
                             margin-left: -8%;
-                            object-fit: cover;
+                            object-fit:cover;
                             border-radius: 5px;
                             z-index: 1;
                             background: #00d8fb;
