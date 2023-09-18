@@ -489,10 +489,32 @@ body .main .content .about-section {
   justify-content: space-around;
   box-sizing: border-box;
   margin-bottom: 2rem;
+  position: relative;
+}
+body .main .content .about-section.hidden {
+  opacity: 0;
+  transition: all 2s ease;
+  filter: blur(5px);
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body .main .content .about-section.show {
+  opacity: 1 !important;
+  transition: all 2s ease;
+  filter: blur(0);
+  position: relative;
 }
 body .main .content .about-section .main_content {
   width: 50%;
   height: 80vh;
+}
+body .main .content .about-section .main_content.hidden {
+  transition: all 2s ease;
+  transform: translateX(-100%);
+}
+body .main .content .about-section .main_content.show {
+  transform: translateX(0%);
 }
 body .main .content .about-section .main_content h4 {
   width: 100%;
@@ -566,8 +588,38 @@ body .main .content .about-section .main_content .technologies li i.bx {
 body .main .content .about-section .me {
   width: 40%;
   height: 65%;
+  position: relative;
   display: flex;
   justify-content: center;
+}
+body .main .content .about-section .me.hidden {
+  transition: all 1s ease;
+  filter: blur(5px);
+  transform: scale(0.9) translateY(100%);
+}
+body .main .content .about-section .me.show {
+  animation-duration: 2s;
+  transform-origin: 0% 0%;
+  animation: 1.5s shake 1s ease;
+  filter: blur(0);
+  transform: scale(1) translateY(0%);
+}
+@keyframes shake {
+  0% {
+    transform: rotate(-5deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 body .main .content .about-section .me .img {
   width: 65%;
