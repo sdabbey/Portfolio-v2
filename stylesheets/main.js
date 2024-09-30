@@ -1,6 +1,34 @@
+
+/*=============== SWIPER JS ===============*/
+let swiperCards = new Swiper(".card__content", {
+    loop: true,
+    spaceBetween: 32,
+    grabCursor: true,
+  
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+  
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  
+    breakpoints:{
+      600: {
+        slidesPerView: 2,
+      },
+      968: {
+        slidesPerView: 3,
+      },
+    },
+  });
+  
 //Work toggle
 const workbtns = document.querySelectorAll(".workplaces .action-buttons li")
-const workdetails = document.querySelectorAll(".work-details")
+const skilldetails = document.querySelectorAll(".skill-details")
 workbtns.forEach(btn => {
     btn.addEventListener("click", () =>{
         workbtns.forEach(button =>{
@@ -9,7 +37,7 @@ workbtns.forEach(btn => {
             }
         })
         btn.classList.add("active")
-        workdetails.forEach(detail =>{
+        skilldetails.forEach(detail =>{
             if(detail.classList.contains("active")){
                 detail.classList.remove("active")
             }
@@ -62,3 +90,5 @@ nav_trigger.onclick = function() {
 searchBtn.onclick = function() {
     sidebar.classList.toggle('active')
 }
+
+
