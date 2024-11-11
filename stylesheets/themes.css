@@ -599,10 +599,10 @@ body .main .content .about-section .main_content .analysis div {
   color: white;
 }
 body .main .content .about-section .main_content .analysis div:first-child {
-  border-right: 1px solid var(--primary-color);
+  border-right: 1px solid #00d8fb;
 }
 body .main .content .about-section .main_content .analysis div:last-child {
-  border-left: 1px solid var(--primary-color);
+  border-left: 1px solid #00d8fb;
 }
 body .main .content .about-section .main_content .analysis div h2 {
   font-size: 2em;
@@ -2463,10 +2463,10 @@ body .main .content footer.footer .content small {
     color: white;
   }
   body .main .content .about-section .main_content .analysis div:first-child {
-    border-right: 1px solid var(--primary-color);
+    border-right: 1px solid #00d8fb;
   }
   body .main .content .about-section .main_content .analysis div:last-child {
-    border-left: 1px solid var(--primary-color);
+    border-left: 1px solid #00d8fb;
   }
   body .main .content .about-section .main_content .analysis div h2 {
     font-size: 2em;
