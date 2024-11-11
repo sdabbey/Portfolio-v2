@@ -149,11 +149,11 @@ body{
         align-items: center;
         justify-content: space-between;
         letter-spacing: .02cm;
-   
-        background: transparent !important;
+    
+        background: var(--primary-color) !important;
         top: 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.059);
-        border: none;
+        
         box-sizing: border-box;
         z-index: 9999;
         .nav-logo{
@@ -452,7 +452,7 @@ body{
                         width: 50%;
                         display: flex;
                         flex-direction: column;
-                        gap: 1rem;
+                        gap: .7rem;
                         box-sizing: border-box;
                         height: 100%;
                         padding: 1rem 2rem;
@@ -481,15 +481,20 @@ body{
                             
                         }
                         .action{
-                       
+                            width: 100%;
                             margin-top: 0%;
                             display: flex;
                             flex-direction: column;
                             box-sizing: border-box;
-                            small{
-                                color: var(--text-color);
-                                
-                                padding: 1rem;
+                            gap: 4.5rem;
+                            position: relative;
+                            
+                            .action-p{
+                                -webkit-text-fill-color: transparent;
+                                background: linear-gradient(10deg, #00eafb, #4B184D);
+                                background-clip: text;
+                                line-height: 1.2rem;
+                               
                             }
                             .btn{
                                 padding: 1rem 1.4rem;
@@ -500,13 +505,22 @@ body{
                                 border-image-slice: 1;
                                 width: fit-content;
                                 font-size: 14px;
+                                margin-left: 20%;
                                 font-family: "Space Grotesk";
                                 border-image-source: linear-gradient(to left, #00d8fb, #4B184D);
                                 &:hover{
-                                    background: var(--primary-color);
+                                    background:#00d8fb;
                                     color: white;
                                     background-clip: text;
                                 }
+                            }
+                            img{
+                                width: 9rem;
+                                position: absolute;
+                                left: 20%;
+                                transform: rotate(30deg);
+                                box-sizing: border-box;
+                                margin-top: 1rem;
                             }
                         }
                     }
@@ -733,21 +747,22 @@ body{
                         height: 100%;
                         border: 2px solid var(--primary-color);
                         border-radius: 5px;
-                        transition: all 4s ease;
-                        
+                        transition: 4s ease;
+                        //object-position: top;
                         img#abbey2{
-                            
+                            //object-position: top;
                             display: none;
                         }
                         &:hover{
                             transform: scale(.98);
-                            transition:all 4s ease;
+                            transition:4s ease;
                                 #abbey1{
                                     transition: 4s cubic-bezier(0.19, 1, 0.22, 1);
                                     display: none;
+
                                 }
                                 #abbey2{
-                                    
+                                    transition:4s ease;
                                     display: flex;
                                 }                                                            
                         }
@@ -760,6 +775,7 @@ body{
                             margin-bottom: 10%;
                             margin-left: -8%;
                             object-fit:cover;
+                            //object-position:top;
                             border-radius: 5px;
                             z-index: 1;
                             background: #00d8fb;
@@ -1343,9 +1359,14 @@ body{
                                 
                                 font-size: 15px;
                                 .date{
-                                    color: var(--accent2);
+                                    color: #00d8fb;
                                     
                                 }
+                                .title{
+                                    color: white;
+
+                                }
+
                             }
                             .description{
                                 width: 100%;
@@ -1353,7 +1374,7 @@ body{
                                     font-weight: bold;
                                     font-size: 15px;
                                     display: flex;
-                                    
+                                    color: white;
                                     box-sizing: border-box;
                                     align-items:flex-end;
                                     padding: .5rem 0;
@@ -1795,7 +1816,7 @@ body{
                         font-size: 1.5em;
                         font-family: 'Barlow Condensed';
                         text-shadow: 1px 1px 1px #00000079;
-                        color: var(--primary-color);
+                        color: var(--accent2);
                         display: flex;
                         flex-direction: row;
                         align-items:center;
@@ -1809,7 +1830,7 @@ body{
                             width: 90%;
                             height: 100%;
                             margin: 0;
-                            color: var(--accent-color);
+                            color: var(--accent2);
                             
                             padding-left: 1rem;
                             font-weight: bold;
@@ -1852,26 +1873,33 @@ body{
                             } 
                             &:nth-child(2) {
                                 grid-row: span 2;
+                               
                                   // Second item spans 1 row
                             }
 
                             &:nth-child(3) {
                                 grid-row: span 1;
+                                
                                   
                             }
 
                             &:nth-child(4) {
                                 grid-row: span 2;
+                                
+                               
                                   // Fourth item spans 2 rows
                             }
 
                             &:nth-child(5) {
                                 grid-row: span 2;  
                                 
+                                
                             }
 
                             &:nth-child(6) {
                                 grid-row: span 1;
+                                
+                                  // Sixth item spans 1 row
                                   
                             }
                             &:hover{
@@ -1930,14 +1958,18 @@ body{
                                 }
                                 h3{
                                     font-size: 1.2rem;
+                                    text-align: center;
+                                    
                                     a{
                                         color: white;
+                                       
                                         text-decoration: none;
                                     }
                                 }
                                 p{
                                     font-size: .8rem;
                                     display: none;
+                                    line-height: 1.2rem;
                                 }
                                 i.bx{
                                     display: none;
@@ -2534,11 +2566,21 @@ body{
                             display: flex;
                             flex-direction: column;
                             box-sizing: border-box;
+                            align-items: center;
                             small{
                                 color: var(--text-color);
                                 
                                 padding: 1rem;
                             }
+                            img{
+                                width: 9rem;
+                                position: absolute;
+                                
+                                transform: rotate(30deg);
+                                box-sizing: border-box;
+                                margin-top:0;
+                            }
+                        
                             .btn{
                                 padding: 1rem 1.4rem;
                                 background: linear-gradient(190deg, #00eafb, #4B184D);
@@ -2548,6 +2590,7 @@ body{
                                 border-image-slice: 1;
                                 width: fit-content;
                                 font-size: 14px;
+                                margin-left: 0 !important;
                                 font-family: "Space Grotesk";
                                 border-image-source: linear-gradient(to left, #00d8fb, #4B184D);
                                 &:hover{
@@ -4001,5 +4044,6 @@ body{
         }
     }
 }
+
 
 }
