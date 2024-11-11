@@ -212,7 +212,7 @@ body .navbar .nav-content .extra a.btn {
   justify-content: center;
 }
 body .navbar .nav-content .extra a.btn:hover {
-  background: var(--primary-color);
+  background: #00d8fb;
   color: white;
   -webkit-background-clip: text;
           background-clip: text;
