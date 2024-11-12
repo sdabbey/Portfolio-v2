@@ -985,7 +985,9 @@ body{
             }
             .blog-research-section{
                 width: 100%;
-                height: 100vh !important;
+                //min-height: 100vh !important;
+                height: fit-content;
+                
                 justify-self: center;
                 padding:0 3rem;
                 display: flex;
@@ -1013,7 +1015,7 @@ body{
                 }
                 .main_content{
                     width: 92.5%;
-                    height:100vh;
+                    height:fit-content;
                     
                     display: flex;
                     flex-direction: column;
@@ -1101,11 +1103,11 @@ body{
                         border-radius: 1.25rem;
                         overflow: hidden;
                         
-                        padding: .5rem;
+                        padding: .3rem;
                         }
                         &__article{
                         width: 300px; // Remove after adding swiper js
-                        height: 400px;
+                        height: 500px;
                         border-radius: 1.25rem;
                         overflow: hidden;
                         box-shadow: 0px 0px 3px 3px #00d9fb0a;
@@ -3079,7 +3081,7 @@ body{
                         }
                         &__article{
                         width: 100%; // Remove after adding swiper js
-                        height: 420px;
+                        height: 500px;
                         border-radius: 1.25rem;
                         overflow: hidden;
                         box-shadow: 0px 0px 3px 2px #00d9fb18;
